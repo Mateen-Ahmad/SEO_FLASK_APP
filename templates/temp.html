@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+        th {
+            text-align: left;
+        }
+    </style>
+    {{ key }}
+    <table style="margin-left: auto; margin-right: auto; color:#23689b;">
+        <thead>
+            <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <th scope="row">Hello</th>
+        <td>Boy</td>
+        </tr>
+        </tbody>
+    </table>
+    {% if fun(key) %}
+    <h1>{{fun(key)}}</h1>
+    {% endif %}
+
+</body>
+</html>

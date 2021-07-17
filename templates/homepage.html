@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title> HomePage</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<section class="home" id="home">
+
+    <div style="display: flex;  justify-content: space-around; width: -webkit-fill-available;">
+   
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-2">SEO Audit and Recommendation through AI</div>
+                <div class="text-3"><i class="fas fa-star"></i>Website Crawling and Site Auditor </div>
+                <div class="text-3"><i class="fas fa-star"></i>Feature Extraction and Analysis </div>
+                <div class="text-3"><i class="fas fa-star"></i>Improvement Recommendation </div>
+                <a href="{{ url_for('nev_services') }}">Optimize</a>
+            </div>
+        </div>
+        <div class= "home-image" style="display: flex; flex-wrap:wrap; align-items: flex-start; justify-content: flex-start; padding: 20px 35px;" >
+            <img src="{{ url_for('static', filename='images/front.png') }}" alt="" srcset="">
+        </div>
+    </div>
+</section>
+
+
+<section class="services" id="services">
+    <div class="max-width">
+        <h2 class="title" style="color:#23689b">AI based SEO Software for Analysis and Recommendation</h2>
+        <div class="serv-content">
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-paint-brush"></i>
+                    <h2>Website Audit</h2>
+                    <p>Our crawler checks your website, extract features from websites and provide you full analysis based on our train model results</p>
+                    <a href="{{ url_for('nev_services') }}">Click Here..</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Page Rank</h2>
+                    <p>Our system predict the rank of your website based on your website information whixh has been extracted by our crawler</p>
+                    <a href="{{ url_for('nev_services') }}">Click Here..</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-code"></i>
+                    <h2>Features Contribution</h2>
+                    <p>Our crawler extracts the features from your website and check the contribution of each feature to optimize the website</p>
+                    <a href="{{ url_for('nev_services') }}">Click Here..</a>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+<section class="details" id="details">
+    <div class="max-width">
+        <div class="serv-content">
+        <h2 class="title">SEO optimizer is an online SEO software for better website optimization.</h2>
+        <p class="text-3">SEO Optimizer checks your complete website, by crawling all linked pages. All found pages with errors, problems with the on-page optimization or problems regarding the page content like duplicate content are collected and displayed in each check section. Of course, you can also analyze all problems of a single page in our page browser. For a sustainable and continuous review of your website, each project is constantly crawled and analyzed by our crawlers to track the progress of your optimization. You will also be notified by our monitoring service with the status of your website via e-mail, if server errors and major problems occur. </p>
+</section>
+<br>
+
+
+{% endblock %}

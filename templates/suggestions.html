@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Suggestions</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<section class="teams" >
+    <div class="max-width">
+    </div>
+</section>
+
+<!-- services section start -->
+<section class="Section1" id="Section1">
+    <div class="max-width">
+        <div class="serv-content">
+            <div class="card" style="padding: 55px 25px;" >
+                <div class="text_4">Suggestions of your Website: {{ myurl }}</div>
+                <div class="text_6">For keyword: {{ keyword }} </div>
+                <br>
+
+                {% if data %}
+                <div>
+                    <table id="customers" style="margin-left: auto; margin-right: auto;">
+                        <thead>
+                            <tr>
+                                <th>Sr. #</th>
+                                <th scope="col">Features</th>
+                                <th scope="col">Suggestions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for key, value in data.items() %}
+                        <tr>
+                            <td></td>
+                            <td style="color:#23689b;">{{ key }}</td>
+                            {% if value[1] == 1 %}
+                            <td style="color: red;">{{ value[0] }}</td>
+                            {% else %}
+                            <td style="color: green;">{{ value[0] }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Services</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+<section class="teams" >
+    <div class="max-width">
+    </div>
+</section>
+
+<!-- services section start -->
+<section class="Section1" id="Section1">
+    <div class="max-width">
+        <div class="serv-content">
+            <div class="card" style="padding: 55px 25px;" >
+                <div class="text_4">Test your Website with the SEO Checker from SEO optimizer!</div>
+                <div class="text_5">Compliance with search engine guidelines is an important factor for the success of your website. The SEO Checker analyzes your website and gives you tips on optimizing your site for a long-term success in search engine optimization!</div>
+                <!-- <input style="width:80%" type="tel" id="URL" name="URL" placeholder="Search">
+                <button class="" id="URLButton" type="submit"><a href="Results.html" >Submit </a></button> -->
+                <form class="center" action="/results" method="POST">
+                    <br>
+                    <div class="mb-3">
+                    <input type="url" id="URL" name="URL" placeholder="Enter URL" required>
+                    <div>
+                        <br>
+                    </div>
+                    <input type="text" id="URL" name="keyword" placeholder="Keyword" required>
+                    </div>
+                    <div>
+                        <br>
+                        <span style="display:flex; justify-content:center; width:100%; padding:0;">
+                            <button type="submit" id="URLButton" class="btn btn-primary">Check</button>
+                        </span>
+                    </div>
+                    <br><br>
+                </form>
+                  
+
+                
+            <!-- about section start -->
+                <section class="about" id="about">
+                    <div class="max-width">
+                        <h2 class="title" style="color:black">Web Audit</h2>
+                        <div class="about-content">
+                            <div class="column left1">
+                                <p style="text-align: left">Analyze any web page with the free SEO checker by SEOCrawler to find technical errors and on-page SEO issues that might be holding your site back from top search engine rankings. Get your free SEO score as well as individual sub-scores for each of the categories checked, including meta-information, page quality, page structure, link structure, server configuration, and external factors and almost 27 faetures of your web page. With your prioritized task list of SEO improvements, you will immediately know where to start to achieve quick and noticeable results.</p>
+                                
+                                <a href="#">read more..</a>
+                                
+                            </div>
+                            <div class="column right1">
+                                <img style="height:280px; " src="{{ url_for('static', filename='images/Overview.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="about" id="about">
+                    <div class="max-width">
+                        <h2 class="title">Meta Tag</h2>
+                        <div class="about-content">
+                            <div class="column left">
+                                <img style="height:280px; width:400px" src="{{ url_for('static', filename='images/Meta-tags.png') }}" alt="">
+                            
+                                
+                            </div>
+                            <div class="column right">
+                                <p>To make sure that search engines understand what your website is about, you have to provide meta-information that helps them categorize your content. The SEOCrawler SEO Checker identifies errors and SEO issues in your meta-information, such as:</p>
+
+                                <p>Meta titles and descriptions that are too short or too long for the search result snippet Meta tags that prevent search engines from indexing your website
+                                    Missing canonical links
+                                    Inconsistent language declarations
+                                    Problematic domain names or page URLs</p>
+
+                                <a href="#">read more..</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+                <section class="about" id="about">
+                    <div class="max-width">
+                        <h2 class="title">Page Rank</h2>
+                        <div class="about-content">
+                            <div class="column left1">
+                                <p style="text-align: left">The SEO optimizer Ranking Dashboard offers you all the most important information about your website’s ranking at a glance. An individual visibility value is calculated, indicating how well your site can be found regarding your specified search terms. A change in the visibility value informs you whether your ranking is improving or climbing down. All search terms are also listed individually and can be filtered and sorted according to changes, positions, new contenders, etc.. Since search terms aren’t all equally important, all reports also take into consideration the search volume, i.e. the number of searches in a month for a specific search term.
+
+                                </p>
+
+                                <a href="#">read more..</a>
+                                
+                            </div>
+                            <div class="column right1">
+                                <img style="height:280px; " src="{{ url_for('static', filename='images/rank.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
